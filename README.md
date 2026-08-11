@@ -31,35 +31,6 @@ A savings account is created when the **interest percentage is greater than 0**.
 
 This allows the application to determine the appropriate account type based on the provided interest percentage.
 
-## OOP Concepts Demonstrated
-
-This project was designed to practice and demonstrate several important Object-Oriented Programming concepts.
-
-### Encapsulation
-
-Account data such as the owner name, balance, and account ID is controlled through the account class. Access to the data is managed through appropriate properties and methods.
-
-### Inheritance
-
-Different account types inherit common functionality from a base bank account class.
-
-For example:
-
-* `BankAccount`
-* `SavingsAccount`
-
-This allows common banking functionality to be shared while still allowing specialized account behavior.
-
-### Polymorphism
-
-The application uses polymorphism to allow different account types to implement or override behavior differently.
-
-For example, withdrawal or interest-related behavior can vary depending on whether the account is a regular or savings account.
-
-### Abstraction
-
-Common account functionality can be defined in a base account class, while specific implementation details are handled by the derived account classes.
-
 ## Technologies Used
 
 * **C#**
