@@ -14,3 +14,4 @@ E:\projects\CSharpProjects\BankAccountApp\obj\Debug\net8.0-windows\refint\BankAc
 E:\projects\CSharpProjects\BankAccountApp\obj\Debug\net8.0-windows\BankAccountApp.pdb
 E:\projects\CSharpProjects\BankAccountApp\obj\Debug\net8.0-windows\BankAccountApp.genruntimeconfig.cache
 E:\projects\CSharpProjects\BankAccountApp\obj\Debug\net8.0-windows\ref\BankAccountApp.dll
+E:\projects\CSharpProjects\BankAccountApp\obj\Debug\net8.0-windows\BankAccountApp.sourcelink.json

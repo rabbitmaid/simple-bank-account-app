@@ -63,7 +63,7 @@ Common account functionality can be defined in a base account class, while speci
 ## Technologies Used
 
 * **C#**
-* **.NET**
+* **.NET 8.0**
 * **Windows Forms**
 * **Object-Oriented Programming (OOP)**
 
