@@ -5,6 +5,7 @@ obj/
 
 # Visual Studio user-specific files
 .vs/
+*.csproj.user
 *.user
 *.suo
 *.userosscache
