@@ -1,6 +1,6 @@
 ﻿namespace BankAccountApp
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         ///  Required designer variable.
@@ -38,6 +38,7 @@
             AmountNum = new NumericUpDown();
             InterestRateNum = new NumericUpDown();
             label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)BankAccountGrid).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AmountNum).BeginInit();
             ((System.ComponentModel.ISupportInitialize)InterestRateNum).BeginInit();
@@ -45,15 +46,15 @@
             // 
             // OwnerTxt
             // 
-            OwnerTxt.Location = new Point(91, 27);
+            OwnerTxt.Location = new Point(90, 70);
             OwnerTxt.Name = "OwnerTxt";
-            OwnerTxt.Size = new Size(177, 23);
+            OwnerTxt.Size = new Size(147, 23);
             OwnerTxt.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(28, 30);
+            label1.Location = new Point(27, 73);
             label1.Name = "label1";
             label1.Size = new Size(45, 15);
             label1.TabIndex = 1;
@@ -62,7 +63,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(28, 220);
+            label2.Location = new Point(261, 220);
             label2.Name = "label2";
             label2.Size = new Size(54, 15);
             label2.TabIndex = 3;
@@ -72,16 +73,16 @@
             // 
             BankAccountGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BankAccountGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            BankAccountGrid.Location = new Point(293, 27);
+            BankAccountGrid.Location = new Point(261, 27);
             BankAccountGrid.Name = "BankAccountGrid";
-            BankAccountGrid.Size = new Size(351, 168);
+            BankAccountGrid.Size = new Size(383, 168);
             BankAccountGrid.TabIndex = 4;
             // 
             // CreateAccountBtn
             // 
-            CreateAccountBtn.Location = new Point(28, 113);
+            CreateAccountBtn.Location = new Point(27, 172);
             CreateAccountBtn.Name = "CreateAccountBtn";
-            CreateAccountBtn.Size = new Size(240, 23);
+            CreateAccountBtn.Size = new Size(210, 23);
             CreateAccountBtn.TabIndex = 5;
             CreateAccountBtn.Text = "Create Account";
             CreateAccountBtn.UseVisualStyleBackColor = true;
@@ -89,9 +90,9 @@
             // 
             // DepositBtn
             // 
-            DepositBtn.Location = new Point(293, 217);
+            DepositBtn.Location = new Point(480, 216);
             DepositBtn.Name = "DepositBtn";
-            DepositBtn.Size = new Size(105, 23);
+            DepositBtn.Size = new Size(80, 23);
             DepositBtn.TabIndex = 6;
             DepositBtn.Text = "Deposit";
             DepositBtn.UseVisualStyleBackColor = true;
@@ -99,9 +100,9 @@
             // 
             // WithdrawBtn
             // 
-            WithdrawBtn.Location = new Point(415, 217);
+            WithdrawBtn.Location = new Point(566, 216);
             WithdrawBtn.Name = "WithdrawBtn";
-            WithdrawBtn.Size = new Size(105, 23);
+            WithdrawBtn.Size = new Size(78, 23);
             WithdrawBtn.TabIndex = 7;
             WithdrawBtn.Text = "Withdraw";
             WithdrawBtn.UseVisualStyleBackColor = true;
@@ -109,34 +110,45 @@
             // 
             // AmountNum
             // 
-            AmountNum.Location = new Point(91, 217);
+            AmountNum.Location = new Point(321, 217);
             AmountNum.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
             AmountNum.Minimum = new decimal(new int[] { 999999999, 0, 0, int.MinValue });
             AmountNum.Name = "AmountNum";
-            AmountNum.Size = new Size(177, 23);
+            AmountNum.Size = new Size(132, 23);
             AmountNum.TabIndex = 8;
             // 
             // InterestRateNum
             // 
-            InterestRateNum.Location = new Point(143, 69);
+            InterestRateNum.Location = new Point(142, 119);
             InterestRateNum.Name = "InterestRateNum";
-            InterestRateNum.Size = new Size(125, 23);
+            InterestRateNum.Size = new Size(95, 23);
             InterestRateNum.TabIndex = 9;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(28, 72);
+            label3.Location = new Point(27, 122);
             label3.Name = "label3";
             label3.Size = new Size(93, 15);
             label3.TabIndex = 10;
             label3.Text = "Interest rate (%):";
             // 
-            // Form1
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(27, 36);
+            label4.Name = "label4";
+            label4.Size = new Size(107, 15);
+            label4.TabIndex = 11;
+            label4.Text = "Add New Account";
+            // 
+            // Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(670, 258);
+            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(InterestRateNum);
             Controls.Add(AmountNum);
@@ -147,7 +159,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(OwnerTxt);
-            Name = "Form1";
+            MaximumSize = new Size(686, 297);
+            MinimumSize = new Size(686, 297);
+            Name = "Home";
             Text = "BankAccountApp";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)BankAccountGrid).EndInit();
@@ -169,5 +183,6 @@
         private NumericUpDown AmountNum;
         private NumericUpDown InterestRateNum;
         private Label label3;
+        private Label label4;
     }
 }

@@ -1,13 +1,23 @@
+using BankAccountApp.App;
+using BankAccountApp.Database;
+using BankAccountApp.Exceptions;
+
 namespace BankAccountApp
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
         List<BankAccount> BankAccounts = new List<BankAccount>();
         private BankDatabase db = new BankDatabase();
 
-        public Form1()
+        public Home()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            BankAccounts = db.GetAllAccounts();
+            RefreshApplication();
         }
 
         //private void CreateAccountBtn_Click(object sender, EventArgs e)
@@ -98,6 +108,8 @@ namespace BankAccountApp
                 try
                 {
                     string message = selectedBankAccount.Deposit(AmountNum.Value);
+                    db.UpdateBalance(selectedBankAccount);
+
                     MessageBox.Show(message, "Amount deposit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (InvalidAmountException ex)
@@ -121,6 +133,9 @@ namespace BankAccountApp
                 try
                 {
                     string message = selectedBankAccount.Withdraw(AmountNum.Value);
+
+                    db.UpdateBalance(selectedBankAccount);
+
                     MessageBox.Show(message, "Amount withdraw", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (InvalidAmountException ex)
@@ -144,10 +159,6 @@ namespace BankAccountApp
             InterestRateNum.Value = 0;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            BankAccounts = db.GetAllAccounts();
-            RefreshApplication();
-        }
+      
     }
 }

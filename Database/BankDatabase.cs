@@ -1,11 +1,12 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using BankAccountApp.App;
+using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankAccountApp
+namespace BankAccountApp.Database
 {
     internal class BankDatabase
     {
@@ -172,6 +173,35 @@ namespace BankAccountApp
             }
 
             return accounts;
+        }
+
+        public void UpdateBalance(BankAccount account)
+        {
+            using (SqliteConnection connection = new SqliteConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = @"
+            UPDATE Accounts
+            SET Balance = $balance
+            WHERE AccountNumber = $accountNumber;
+        ";
+
+                using (SqliteCommand command = new SqliteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue(
+                        "$balance",
+                        decimal.ToInt64(account.Balance * 100)
+                    );
+
+                    command.Parameters.AddWithValue(
+                        "$accountNumber",
+                        account.AccountNumber.ToString()
+                    );
+
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }
