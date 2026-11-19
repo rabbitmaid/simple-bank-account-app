@@ -8,7 +8,7 @@ namespace BankAccountApp
 {
     public class SavingsAccount: BankAccount
     {
-        public decimal InterestRate { get; set; cd }
+        public decimal InterestRate { get; set; }
 
         public SavingsAccount(string owner, decimal interestRate) : base(owner + " (" + interestRate + "%)") 
         {

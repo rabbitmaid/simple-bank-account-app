@@ -149,6 +149,7 @@
             Controls.Add(OwnerTxt);
             Name = "Form1";
             Text = "BankAccountApp";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)BankAccountGrid).EndInit();
             ((System.ComponentModel.ISupportInitialize)AmountNum).EndInit();
             ((System.ComponentModel.ISupportInitialize)InterestRateNum).EndInit();

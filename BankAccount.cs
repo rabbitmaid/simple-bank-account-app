@@ -42,6 +42,11 @@ namespace BankAccountApp
             return "Withdraw Completed Successfully";
         }
 
+        public void RestoreBalance(decimal balance)
+        {
+            Balance = balance;
+        }
+
 
     }
 }
